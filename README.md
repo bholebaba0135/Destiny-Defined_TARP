@@ -73,7 +73,7 @@ id3 --> id3d[Higlight<br>the<br>calculated path<br>on<br>map routes]
 ##### 2. Databases
 - OpenStreetMap (OSM) - PostgreSQL based
 
-![](osm_data.PNG)
+![](osm_data.png)
 
 
 - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
