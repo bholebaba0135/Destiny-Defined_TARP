@@ -36,25 +36,25 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 
 ```mermaid
 graph TD
-id1[Multi Stop Route Planner] --> id2[Planning<br>&br>Modelling]
+id1[Multi Stop Route Planner] --> id2[Planning<br>&<br>Modelling]
 id1 --> id3[Construction/Coding]
 id1 --> id4[Integration<br>and<br>Testing]
 id1 --> id5[Deployment]
 id2 --> id2a[literature Survey]
-id2a --> id2a1[Determination of Suitable Algorithm]
+id2a --> id2a1[Determination of<br>Suitable Algorithm]
 id2 --> id2b[Feasibility analysis]
-id2b --> id2b1[Regular consutations from Manoov Sir]
-id2b --> id2b2[Feedback from IT specialists]
-id2 --> id2c[Identification of Modules to be developed]
-id2c --> id2c1[updation of the first draft of list of modules]
+id2b --> id2b1[Regular consutations<br>from<br>Manoov Sir]
+id2b --> id2b2[Feedback<br>from<br>IT specialists]
+id2 --> id2c[Identification<br>of<br>Modules]
+id2c --> id2c1[updation<br>of<br>module list]
 id3 --> id3a[Dynamic web/app Interface]
-id3a --> id3a1[GET no. of destinations]
-id3a --> id3a2[RETURN relavant no. of dropdowns]
-id3a --> id3a3[Get destinations]
-id3a --> id3a4[Highlight the destination nodes on Map Image]
-id3 --> id3b[Synchronizing the search request to Open Source Map Data]
-id3 --> id3c[Determination of most Optimal Path]
-id3 --> id3d[Higlighting the calculated path on map routes]
+id3a --> id3a1[GET<br>no. of destinations]
+id3a --> id3a2[RETURN<br>relavant no. of dropdowns]
+id3a --> id3a3[Get<br>destinations]
+id3a --> id3a4[Highlight<br>destination nodes]
+id3 --> id3b[Synchronizing<br>search request<br>to<br>Open Source Map Data]
+id3 --> id3c[Determination<br>of<br>Most Optimal Path]
+id3 --> id3d[Higlight<br>the<br>calculated path<br>on<br>map routes]
 
 
 ```
