@@ -12,6 +12,10 @@ Iterative Waterfall
 
 ### Software Requirements
 
+- Leaflet Library
+- OpenChargeMap API
+- OpenStreetMap API
+
 ### FlowChart
 
 ```mermaid
@@ -30,15 +34,35 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 
 ### Work Breakdown Structure
 
+```mermaid
+graph TD
+id1[Multi Stop Route Planner] --> id2[Planning]
+id1 --> id3[Modelling]
+id1 --> id4[Construction]
+id1 --> id5[Integration<br>and<br>Testing]
+id1 --> id6[Deployment]
+id2 --> id2a[literature Survey]
+id2 --> id2b[Consultations from Manoov Sir]
+
+```
+
 ### Dependencies
 
-- mermaid-js
+- mermaid-js (for documentation)
+- Nominatim API (Allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
 
 ### Resources
 
+##### 1. Reference and Learning
 - [Markdown cheatsheet for preparing Readme.md](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 - [How to use an API tutorial](https://www.youtube.com/watch?v=WXsD0ZgxjRw)
 
+##### 2. Databases
+- OpenStreetMap (OSM) - PostgreSQL based
 
+![](osm_data.PNG)
+
+
+- pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
 
 
