@@ -44,7 +44,7 @@ gantt
 title Multi Stop Route Planner
 dateFormat DD-MM-YYYY
 section Planning & Modelling
-Defining<br>thebr>scopebr>of thebr>project :a1, 03-02-2023, 8d
+Defining<br>the<br>scope<br>of thebr>project :a1, 03-02-2023, 8d
 First Feedback Round<br>with<br>Manoov sir :a2, 08-02-2023, 1d
 Literature Survey :after a2, 15d
 
