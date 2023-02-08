@@ -38,6 +38,18 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 
 ### Gantt Chart
 
+```mermaid
+gantt
+
+title Multi Stop Route Planner
+dateFormat DD-MM-YYYY
+section Planning & Modelling
+Defining the scope of the project :a1, 03-02-2023, 8d
+First Feedback Round with Manoov sir :a2, 08-02-2023, 1d
+Literature Survey :after a2, 15d
+
+```
+
 ### Work Breakdown Structure
 
 ```mermaid
