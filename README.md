@@ -18,9 +18,22 @@ Iterative Waterfall
 
 ### Software Requirements
 
-- Leaflet Library
-- OpenChargeMap API
-- OpenStreetMap API
+#### 1. Dependencies
+ - mermaid-js (for documentation)
+ - HTML, Tailwind CSS and Vanilla Javascript (For dynamic web UI)
+ - Nominatim API (Allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
+ - Leaflet Library (Mobile friendly interactive maps)
+ - OpenChargeMap API (allows access to open data registry of EV charging points)
+ - OpenStreetMap API (allows us to use OSM database)
+
+#### 2. Databases
+ - OpenStreetMap (OSM) - PostgreSQL based
+
+    ![](osm_data.png)
+
+
+ - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
+
 
 ### FlowChart
 
@@ -35,6 +48,7 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 
 
 ```
+
 
 ### Gantt Chart
 
@@ -123,23 +137,12 @@ id5 -->id5b[4.2 Configuring environment variables]
 ```
 
 
-### Dependencies
-
-- mermaid-js (for documentation)
-- Nominatim API (Allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
-
 ### Resources
 
-##### 1. Reference and Learning
+##### Reference and Learning
 - [Markdown cheatsheet for preparing Readme.md](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 - [How to use an API tutorial](https://www.youtube.com/watch?v=WXsD0ZgxjRw)
 
-##### 2. Databases
-- OpenStreetMap (OSM) - PostgreSQL based
 
-![](osm_data.png)
-
-
-- pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
 
 
