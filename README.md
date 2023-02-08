@@ -62,7 +62,7 @@ Deploying the web app: after a7, 15d
 
 ```
 
-### Work Breakdown Structure
+### Activity-based Work Breakdown Structure
 
 ```mermaid
 graph TD
