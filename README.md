@@ -16,25 +16,6 @@ Iterative Waterfall
 4. Highlighting the calculated route on GMaps : Rama Krishna Mohapatro (20BCE0877) and Pallav Jyoti Buragohain (20BCE0866)
 
 
-### Software Requirements
-
-#### 1. Dependencies
- - mermaid-js (for documentation)
- - HTML, Tailwind CSS and Vanilla Javascript (For dynamic web UI)
- - Nominatim API (Allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
- - Leaflet Library (Mobile friendly interactive maps)
- - OpenChargeMap API (allows access to open data registry of EV charging points)
- - OpenStreetMap API (allows us to use OSM database)
-
-#### 2. Databases
- - OpenStreetMap (OSM) - PostgreSQL based
-
-    ![](osm_data.png)
-
-
- - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
-
-
 ### FlowChart
 
 ```mermaid
@@ -136,6 +117,27 @@ id5 -->id5b[4.2 Configuring environment variables]
 
 ```
 
+### Software Requirements
+
+#### 1. Dependencies
+ - mermaid-js (for documentation)
+ - HTML, Tailwind CSS and Vanilla Javascript (For dynamic web UI)
+ - Nominatim API (Allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
+ - Leaflet Library (Mobile friendly interactive maps)
+ - OpenChargeMap API (allows access to open data registry of EV charging points)
+ - OpenStreetMap API (allows us to use OSM database)
+
+#### 2. Databases
+ - OpenStreetMap (OSM) - PostgreSQL based
+
+    ![](osm_data.png)
+
+
+ - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
+
+#### 3. Development Environment
+
+VS Code / Github Codespace
 
 ### Resources
 
