@@ -38,7 +38,31 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 
 ### Gantt Chart
 
-### Work Breakdown Structure
+```mermaid
+gantt
+
+title Multi Stop Route Planner
+dateFormat DD-MM-YYYY
+section Planning & Modelling
+Defining the scope :a1, 03-02-2023, 8d
+First Feedback :a2, 08-02-2023, 1d
+Literature Survey :after a2, 15d
+Update Module List :09-02-2023, 15d
+section Construction/Coding
+Dynamic Web Interface :24-02-2023, 9d
+Synchronization to OSM Data :a3, 24-02-2023, 17d
+Most Optimal Path Calaulation :a4, after a3, 9d
+Fetching User Readable Result: a6, after a4, 15d
+section Integration & Unit Testing
+API integration: a5, 24-02-2023, 35d
+Testing algorithm Implementation: after a4, 8d
+Testing Route Highlighting: a7, after a6, 9d
+section Deployment
+Deploying the web app: after a7, 15d
+
+```
+
+### Activity-based Work Breakdown Structure
 
 ```mermaid
 graph TD
