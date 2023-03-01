@@ -1,5 +1,5 @@
 # Destiny-Defined_TARP
-#Team:
+
 ### Project Title 
 
 Mutli Destination Most Optimal Route Planner
