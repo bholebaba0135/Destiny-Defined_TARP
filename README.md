@@ -145,7 +145,8 @@ id5 -->id5b[4.2 Configuring environment variables]
 
 #### 3. Development Environment 
 
-Editor: VS Code<br>
+Code Editor: VS Code<br>
+MarkDown Editor : Obsidian<br>
 Browser: Chrome(majorly)<br>
 Graphics Editor: Figma, Adobe Photoshop<br>
 FTP Client: FileZilla, CyberDuck<br>
