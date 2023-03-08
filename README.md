@@ -138,9 +138,14 @@ id5 -->id5b[4.2 Configuring environment variables]
 
  - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
 
-#### 3. Development Environment
+#### 3. Development Environment 
 
-VS Code / Github Codespace
+Editor: VS Code
+Browser: Chrome(majorly)
+Graphics Editor: Figma, Adobe Photoshop
+FTP Client: FileZilla, CyberDuck
+Version Control: Git
+Module Integration: Github
 
 ### Resources
 
