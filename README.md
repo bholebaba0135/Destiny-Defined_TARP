@@ -140,11 +140,11 @@ id5 -->id5b[4.2 Configuring environment variables]
 
 #### 3. Development Environment 
 
-Editor: VS Code
-Browser: Chrome(majorly)
-Graphics Editor: Figma, Adobe Photoshop
-FTP Client: FileZilla, CyberDuck
-Version Control: Git
+Editor: VS Code<br>
+Browser: Chrome(majorly)<br>
+Graphics Editor: Figma, Adobe Photoshop<br>
+FTP Client: FileZilla, CyberDuck<br>
+Version Control: Git<br>
 Module Integration: Github
 
 ### Resources
