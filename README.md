@@ -9,7 +9,12 @@ We wish to build a web app that would enable tourists who may wish to travel to 
 
 ### Development Model
 
-Iterative Waterfall
+Iterative Waterfall<br>
+<br>
+In this process model, the development process is divided into several phases such as requirement gathering, design, coding, testing and deployment.
+Each phase is executed only when the previous phase is completed, so it is a step by step process without parallelism.
+It is suitable for small scale projects with low risks, when quality is preferred over cost and requirements are well-known upfront.
+The iterative nature provides for error correction at the end of each phase leading to less errors in the final testing phase.
 
 ### Roles and Responsibilities
 
