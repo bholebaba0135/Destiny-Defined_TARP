@@ -4,6 +4,9 @@
 
 Mutli Destination Most Optimal Route Planner
 
+### Objective
+We wish to build a web app that would enable tourists who may wish to travel to multiple destinations in a new city to navigate the shortest route without passing the same street twice. This would prove to be really useful in travel planning. 
+
 ### Development Model
 
 Iterative Waterfall
