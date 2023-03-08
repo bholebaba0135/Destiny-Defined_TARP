@@ -4,9 +4,17 @@
 
 Mutli Destination Most Optimal Route Planner
 
+### Objective
+We wish to build a web app that would enable tourists who may wish to travel to multiple destinations in a new city to navigate the shortest route without passing the same street twice. This would prove to be really useful in travel planning. 
+
 ### Development Model
 
-Iterative Waterfall
+Iterative Waterfall<br>
+<br>
+In this process model, the development process is divided into several phases such as requirement gathering, design, coding, testing and deployment.
+Each phase is executed only when the previous phase is completed, so it is a step by step process without parallelism.
+It is suitable for small scale projects with low risks, when quality is preferred over cost and requirements are well-known upfront.
+The iterative nature provides for error correction at the end of each phase leading to less errors in the final testing phase.
 
 ### Roles and Responsibilities
 
@@ -135,9 +143,14 @@ id5 -->id5b[4.2 Configuring environment variables]
 
  - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
 
-#### 3. Development Environment
+#### 3. Development Environment 
 
-VS Code / Github Codespace
+Editor: VS Code<br>
+Browser: Chrome(majorly)<br>
+Graphics Editor: Figma, Adobe Photoshop<br>
+FTP Client: FileZilla, CyberDuck<br>
+Version Control: Git<br>
+Module Integration: Github
 
 ### Resources
 
