@@ -153,6 +153,15 @@ FTP Client: FileZilla, CyberDuck<br>
 Version Control: Git<br>
 Module Integration: Github
 
+### Hardware Requirements
+
+Operating System: Windows 8 or later
+Processor: Intel Pentium 4 or later
+Memory: 2GB minimum, 4GB recommended
+Screen Resolution: 1280X1024 or larger
+Internet upstream Bandwidth: 2Mbps or more
+Browser: Chrome/Edge/Firefox
+
 ### Resources
 
 ##### Reference and Learning
