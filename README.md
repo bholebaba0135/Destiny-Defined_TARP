@@ -155,11 +155,11 @@ Module Integration: Github
 
 ### Hardware Requirements
 
-Operating System: Windows 8 or later
-Processor: Intel Pentium 4 or later
-Memory: 2GB minimum, 4GB recommended
-Screen Resolution: 1280X1024 or larger
-Internet upstream Bandwidth: 2Mbps or more
+Operating System: Windows 8 or later<br>
+Processor: Intel Pentium 4 or later<br>
+Memory: 2GB minimum, 4GB recommended<br>
+Screen Resolution: 1280X1024 or larger<br>
+Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
 
 ### Resources
