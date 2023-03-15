@@ -167,7 +167,13 @@ Browser: Chrome/Edge/Firefox
 ##### Reference and Learning
 - [Markdown cheatsheet for preparing Readme.md](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 - [How to use an API tutorial](https://www.youtube.com/watch?v=WXsD0ZgxjRw)
-
+- https://pgrouting.org/
+- https://www.openstreetmap.org/
+- https://developers.google.com/maps/documentation/javascript/distancematrix
+- https://www.w3schools.com/graphics/google_maps_basic.asp
+- https://www.upperinc.com/blog/what-is-multi-stop-route-planning/
+- https://pretalx.com/sotm-africa-2021/talk/7YHERU/
+- https://memgraph.com/blog/how-to-build-a-route-planning-application-with-breadth-first-search-and-dijkstras-algorithm
 
 
 
