@@ -162,11 +162,29 @@ Screen Resolution: 1280X1024 or larger<br>
 Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
 
-### Resources
+### References
 
-##### Reference and Learning
+##### Scholarly References
+- Huang, Y., Ying, J. J. C., Yu, P. S., & Tseng, V. S. (2020). Dynamic graph mining for multi-weight multi-destination route planning with deadlines constraints. ACM Transactions on Knowledge Discovery from Data (TKDD), 15(1), 1-32.
+- Chowdhury, S., & Giacaman, N. (2015). En-route planning of multi-destination public-transport trips using smartphones. Journal of Public Transportation, 18(4), 31-45.
+- Hakeem, A., Gehani, N., Ding, X., Curtmola, R., & Borcea, C. (2019, November). Multi-destination vehicular route planning with parking and traffic constraints. In Proceedings of the 16th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (pp. 298-307)
+- Nanayakkara, S. C., Srinivasan, D., Lup, L. W., German, X., Taylor, E., & Ong, S. H. (2007, September). Genetic algorithm based route planner for large urban street networks. In 2007 IEEE Congress on Evolutionary Computation (pp. 4469-4474). IEEE
+- Edelkamp, S., Jabbar, S., & Willhalm, T. (2005). Geometric travel planning. IEEE Transactions on Intelligent Transportation Systems, 6(1), 5-16.
+
+##### Web References
+- https://pgrouting.org/
+- https://www.openstreetmap.org/
+- https://developers.google.com/maps/documentation/javascript/distancematrix
+- https://www.w3schools.com/graphics/google_maps_basic.asp
+- https://www.upperinc.com/blog/what-is-multi-stop-route-planning/
+- https://pretalx.com/sotm-africa-2021/talk/7YHERU/
+- https://memgraph.com/blog/how-to-build-a-route-planning-application-with-breadth-first-search-and-dijkstras-algorithm
+- https://towardsdatascience.com/driving-distance-between-two-or-more-places-in-python-89779d691def
+
+##### Learning Resources
 - [Markdown cheatsheet for preparing Readme.md](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 - [How to use an API tutorial](https://www.youtube.com/watch?v=WXsD0ZgxjRw)
+
 
 
 
