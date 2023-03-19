@@ -184,6 +184,9 @@ Browser: Chrome/Edge/Firefox
 ##### Learning Resources
 - [Markdown cheatsheet for preparing Readme.md](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 - [How to use an API tutorial](https://www.youtube.com/watch?v=WXsD0ZgxjRw)
+- [pgRouting Workshop - Self Study](http://workshop.pgrouting.org/2.8/en/index.html)
+- [Using OpenStreetMAP data with pgRouting](https://medium.com/@frederic.rodrigo/imposm2pgrouting-route-planning-on-openstreetmap-road-network-with-the-benefit-of-updates-1e70f280ac5e)
+- [Loading data from OpenStreet Map API](https://towardsdatascience.com/loading-data-from-openstreetmap-with-python-and-the-overpass-api-513882a27fd0)
 
 
 
