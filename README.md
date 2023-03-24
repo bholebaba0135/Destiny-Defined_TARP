@@ -22,6 +22,7 @@ The iterative nature provides for error correction at the end of each phase lead
 2. Synchronizing search request to open source Map Data: Pranjal Choudhary (20BCE0571) and Anmol Gupta (20BCB0135)
 3. Determination of most optimal Path : Vivek Rathore (20BCE0573) and Aditya Singh Rathore (20BCE0730)
 4. Highlighting the calculated route on GMaps : Rama Krishna Mohapatro (20BCE0877) and Pallav Jyoti Buragohain (20BCE0866)
+5. <i><b>Note:</b> Visit [here](Workflow) to checkout the workflow</i>
 
 
 ### FlowChart
