@@ -143,6 +143,7 @@ id5 -->id5b[4.2 Configuring environment variables]
 
 
  - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
+ 
 
 #### 3. Development Environment 
 
@@ -162,6 +163,12 @@ Memory: 2GB minimum, 4GB recommended<br>
 Screen Resolution: 1280X1024 or larger<br>
 Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
+
+### Literature Survey
+| Title | Author | Algorithm and dataset | Important Findings | Limitations |
+| --- | --- | --- | --- | --- |
+
+
 
 ### References
 
