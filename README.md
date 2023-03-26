@@ -166,7 +166,7 @@ Browser: Chrome/Edge/Firefox
 ### Literature Survey
 
 | Title | Author | Algorithm and Dataset | Findings | Limitations | References |
-| --- | --- | --- |
+| --- | --- | --- | --- | --- | ---|
 
 
 ### References
