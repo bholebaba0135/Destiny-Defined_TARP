@@ -163,6 +163,12 @@ Screen Resolution: 1280X1024 or larger<br>
 Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
 
+### Literature Survey
+
+| Title | Author | Algorithm and Dataset | Findings | Limitations | References |
+| --- | --- | --- |
+
+
 ### References
 
 ##### Scholarly References
