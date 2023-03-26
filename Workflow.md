@@ -34,3 +34,8 @@
 	- Enable Auto Concatenaton
 	- Click on 'Add Citation Format' and name it APA. Select Style as American Psychological Association 7th edition from dropdown.
 	- Click on 'Add Import Format'
+
+## Add-ons for Zotero
+
+- [MDnotes](https://github.com/argenos/zotero-mdnotes/releases/tag/0.2.3)
+- [Scihub](https://github.com/ethanwillis/zotero-scihub)
