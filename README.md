@@ -165,8 +165,9 @@ Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
 
 ### Literature Survey
-| Title | Author | Algorithm and dataset | Important Findings | Limitations | References |
+|  Title  |  Author  |  Algorithm and dataset  |  Important Findings  |  Limitations  |  References  |
 | --- | --- | --- | --- | --- | --- |
+| Multi-Destination Vehicular Route Planning with Parking and Traffic Constraints | Abeer et al. (2019) | The algorithm uses a clustering phase and a graph search phase. The article uses real world traffic data and synthetic parking data | The proposed algorithm was compared with Nearest Neighbour algorithm and the Traveling Salesman Problem algorithm. The simulations show that the proposed algorithm outperforms the other algorithms in terms of both route quality and computation time. | The limitations are Limited Parking Availability , Fixed Traffic Conditions , Incomplete Data , Computational Complexity | Hakeem, A., Gehani, N., Ding, X., Curtmola, R., & Borcea, C. (2019, November). Multi-destination vehicular route planning with parking and traffic constraints. In _Proceedings of the 16th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services_ (pp. 298-307). |   
  
 
 
