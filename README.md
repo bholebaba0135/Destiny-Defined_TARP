@@ -194,7 +194,7 @@ Browser: Chrome/Edge/Firefox
 - [pgRouting Workshop - Self Study](http://workshop.pgrouting.org/2.8/en/index.html)
 - [Using OpenStreetMAP data with pgRouting](https://medium.com/@frederic.rodrigo/imposm2pgrouting-route-planning-on-openstreetmap-road-network-with-the-benefit-of-updates-1e70f280ac5e)
 - [Loading data from OpenStreet Map API](https://towardsdatascience.com/loading-data-from-openstreetmap-with-python-and-the-overpass-api-513882a27fd0)
-- [Visulaization](Find and plot your optimal path using OSM, Plotly and NetworkX in Python)
+- [Visulaization](https://towardsdatascience.com/find-and-plot-your-optimal-path-using-plotly-and-networkx-in-python-17e75387b873)
 
 
 
