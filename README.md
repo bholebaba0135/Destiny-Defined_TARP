@@ -163,6 +163,17 @@ Screen Resolution: 1280X1024 or larger<br>
 Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
 
+### Literature Survey
+
+| Title | Author | Algorithm and Dataset | Important Findings | Limitations | References |
+| --- | --- | --- | --- | --- | --- |
+| A multi-objective time-dependent route planner: a real world application to Milano city| Maurizio Bruglieri, Alberto Colorni, Federico Lia, Alessandro Luè | The paper presents an algorithm for multi-objective time-dependent route planning in urban environments. The algorithm is based on a Pareto optimization approach and takes into account multiple objectives, such as travel time, distance, and environmental impact.The dataset used in the paper is a real-world dataset of road network and traffic conditions in Milan, Italy. The dataset includes information on road segments, travel times, speed limits, and traffic volumes.| The algorithm is based on a combination of Dijkstra's algorithm and the Pareto dominance principle, and is able to generate routes that minimize travel time, CO2 emissions, and noise pollution simultaneously. | Limited validation,specific geographic area,Lack of consideration for real-time traffic information,Limited optimization criteria,Limited consideration for user preferences | --- |
+| RouteMe: A Mobile Recommender System for Personalized, Multi-Modal Route Planning | Daniel Herzog Hesham Massoud Wolfgang Wornd| The paper proposes a multi-modal route planning algorithm that takes into account users' preferences and constraints Dataset - The paper does not mention any specific dataset used for the experiments.Instead, the authors state that they collected data from real users through a mobile app that implements the proposed algorithm. | personalized, multi-modal route planning. The system utilizes a hybrid collaborative filtering approach, combining both user-based and item-based collaborative filtering, to recommend personalized routes to users. | Limited coverage,Data accuracy,User preferences,Computational complexity etc | --- | 
+| Designing a route planner to facilitate and promote cycling in Metro Vancouver,Canada | Jason G. Su,Meghan Winters,Melissa Nunes,Michael Brauer | presents a cycling route planner for Metro Vancouver, Canada, which aims to facilitate cycling among the general public and transportation planners.The dataset used in the study included road network data, elevation data, and transit schedules | important finding of this paper is that the cycling route planner developed for Metro Vancouver was able to successfully incorporate variables that influence cycling behavior and preferences. | The study did not evaluate the impact of the route planner on increasing cycling rates in the city,The planner is only applicable to Metro Vancouver and may not be easily transferable to other cities with different topographies, infrastructures, and cycling cultures | --- |
+
+
+
+
 ### References
 
 ##### Scholarly References
