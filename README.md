@@ -192,7 +192,7 @@ The algorithm generates multiple near-optimal routes to destinations and efficie
 ##### 2. Paper Title: Xhare-a-Ride: A Search Optimized Dynamic Ride Sharing System with Approximation Guarantee
 The approach discretizes the geographical region hierarchically into grids, landmarks, and clusters, along with an efficient in-memory indexing of rides. This enables XAR to eliminate the shortest path computation in real-time during search and makes it search-optimized. These methods have been developed with theoretical guarantees and ensure spatio-temporal validity within a specified error tolerance.
 
-##### 3. Paper Title: 
+##### 3. Paper Title: Parallel Hyper-Heuristic Algorithm for Multi-Objective Route Planning in a Smart City
 The research provides a multi-objective hyper-heuristic (MOHH) framework for smart city walking route planning. Low-level heuristics generate new routes, and reinforcement learning selects good heuristics to speed up search. Using a general-purpose graphics processing unit, the reinforcement learning-based multi-objective hyper-heuristic (RL-MOHH) algorithm is improved and parallelized. A historical New York City safety-index map is extensively tested.
 
 ### References
