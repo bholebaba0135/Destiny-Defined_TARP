@@ -170,8 +170,23 @@ Browser: Chrome/Edge/Firefox
 | Artificial Intelligence Aided Recommendation Based Mobile Trip Planner For Eskisehir City | Ahmet Aydin, Sedat Telceken | Algo:Optimal Route Planner Algo <br> Dataset Google Maps’ geocoding services convert user entries into latitude and longitude coordinates in sql | Proposed system uses artificial intelligence algorithms such as A* and Ant Colony Optimization to calculate the best route for the traveler based on their current GPS location and preferences. The system also offers recommendations to the traveler and allows them to re-plan their route interactively. | The system only considers the user's current location and preferences to plan the trip, but it does not take into account other external factors such as weather conditions, traffic, and events happening in the city. | --- |
 | Participatory Route Planning | David Wilkie, Cenk Baykal, Ming C. Lin | The A* algorithm from to compute an optimal route with respect to the cost metric between start node s and goal node g at time t0.<br> Live traffic data can be collected by loop-detectors, cameras, toll port data, and cell phone localization | The paper presents a suitable approach for realistic, city-scale scenarios, a prototype system to demonstrate feasibility, and experiments using a state-of-the-art microscopic traffic simulator | The approach's implementation requires significant technological infrastructure and development, which may be costly and difficult to deploy on a large scale. | --- |
 
+### Methodologies
 
-
+1. Personalized Route Planning in Road Networks: 
+    
+    The proposed method heavily relies on the quality of the road network data. Inaccuracies or missing data in the road network may negatively impact the accuracy of the personalized route planning. The method assumes that the user preferences are static throughout the journey, which may not be true in real-life scenarios where the user's preferences may change due to various reasons. The proposed method does not consider real-time traffic conditions, which may affect the actual travel time and route selection. The method may not be scalable for large road networks due to its computational complexity.
+    
+2. Artificial Intelligence Aided Recommendation Based Mobile Trip Planner For Eskisehir City  : 
+       This paper proposes a new mobile trip planner for Eskisehir city in Turkey, which allows travelers to find a route that minimizes total traveling time while optimizing visiting time for each point of interest. The application recommends places based on user preferences and other users' ratings and tracks the user's trip to make reasonable suggestions. The authors collected and categorized data from reliable sources and users, and designed a well-structured database to support the application. The proposed application uses a combination of search algorithm and recommendation system simultaneously to improve trip planning. The algorithms used in the application are A* and Ant Colony Optimization. The paper discusses the behavior of the application for different scenarios and displays the results obtained from the tests. The proposed application is dynamic, user-interacted, capable of responding quickly, and well-designed to offer users an accurate plan with detailed information to make an enjoyable trip.
+     
+ 3. Participatory Route Planning  : 
+    
+    1.User Input: The system collects input from users about their preferences for a route, such as distance, scenery, or specific locations they want to visit.
+     2.Data Integration: The system integrates data from various sources, such as maps, traffic information, and points of interest databases.
+     3.Route Generation: Based on user input and integrated data, the system generates a set of candidate routes.
+    4.User Evaluation: Users can evaluate and compare the candidate routes based on their preferences and make modifications if needed.
+    5.Optimization: The system uses optimization algorithms to further refine the selected route based on the user's evaluation and feedback.
+    6.Final Route Selection: The system presents the final optimized route to the user for navigation.
 
 
 
