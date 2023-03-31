@@ -13,7 +13,9 @@
             "state": {
               "type": "markdown",
               "state": {
+
                 "file": "Workflow.md",
+
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +71,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "1652b8b1d00b9371",
@@ -85,7 +87,9 @@
             "state": {
               "type": "backlink",
               "state": {
+
                 "file": "Workflow.md",
+
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +106,10 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+
+
                 "file": "Workflow.md",
+
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +132,9 @@
             "state": {
               "type": "outline",
               "state": {
+
                 "file": "Workflow.md"
+
               }
             }
           }
