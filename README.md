@@ -141,7 +141,6 @@ id5 -->id5b[4.2 Configuring environment variables]
 
     ![](osm_data.png)
 
-
  - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
  
 
