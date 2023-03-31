@@ -13,7 +13,11 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+
+
+
+                "file": "Workflow.md",
+
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +73,9 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5,
-    "collapsed": true
+
+    "width": 200
+
   },
   "right": {
     "id": "1652b8b1d00b9371",
@@ -86,7 +91,11 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+
+
+                "file": "Workflow.md",
+
+
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+
+
+                "file": "Workflow.md",
+
+
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +139,11 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+
+
+                "file": "Workflow.md"
+
+
               }
             }
           }
@@ -149,7 +166,7 @@
   },
   "active": "b6f72c98060ec136",
   "lastOpenFiles": [
-    "Untitled.canvas",
+
     "README.md",
     "Workflow.md",
     "osm.md",
