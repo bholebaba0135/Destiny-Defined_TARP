@@ -198,4 +198,22 @@ Browser: Chrome/Edge/Firefox
 
 
 
+```mermaid
+
+flowchart TD
+id1((Nature Inspired Algorithms)) --> id2((Swarm Intelligence))
+id1 --> id3(Evolutionary)
+id2 --> id4((Brain Storm<br>Optimization))
+id2 --> id5((Self Organising<br>Migrating))
+id2 --> id6((Particle Swarm<br>Optimization))
+id2 --> id7((Ant Colony<br>Optimization))
+id2 --> id8((Glowworm<bR>Optimization))
+id3 --> id9((Genetic<br>Algorithm))
+id3 --> id10((Differential<br>Evolution))
+
+```
+
+
+
+
 
