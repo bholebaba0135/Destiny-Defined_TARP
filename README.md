@@ -45,24 +45,24 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 ```mermaid
 gantt
 
-title Multi Stop Route Planner
+title EduBuddy
 dateFormat DD-MM-YYYY
-section Planning & Modelling
-Defining the scope :a1, 03-02-2023, 8d
-First Feedback :a2, 08-02-2023, 1d
-Literature Survey :after a2, 15d
-Update Module List :09-02-2023, 15d
-section Construction/Coding
-Dynamic Web Interface :24-02-2023, 9d
-Synchronization to OSM Data :a3, 24-02-2023, 17d
-Most Optimal Path Calaulation :a4, after a3, 9d
-Fetching User Readable Result: a6, after a4, 15d
-section Integration & Unit Testing
-API integration: a5, 24-02-2023, 35d
-Testing algorithm Implementation: after a4, 8d
-Testing Route Highlighting: a7, after a6, 9d
-section Deployment
-Deploying the web app: after a7, 15d
+section Task1
+Requirement Analysis :a1, 03-02-2023, 10d
+section Task2
+Architecture Design :a2,after a1, 5d
+section Task3
+GUI Design: a3,after a2, 8d
+section Task4
+Database Design: a4, after a3, 6d
+section Task5
+GUI Coding: a5, after a4, 15d
+section Task6
+Database Coding: a6,after a5, 8d
+section Task7
+Integration: a7, after a6, 3d
+section Task8
+Testing:a8, after a7, 7d
 
 ```
 
