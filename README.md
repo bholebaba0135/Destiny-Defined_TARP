@@ -147,7 +147,7 @@ id5 -->id5b[4.2 Configuring environment variables]
 
 #### 3. Development Environment 
 
-Code Editor: VS Code<br>
+Code Editor: VS Code, Jupyter<br>
 MarkDown Editor : Obsidian<br>
 Browser: Chrome(majorly)<br>
 Graphics Editor: Figma, Adobe Photoshop<br>
