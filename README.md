@@ -437,6 +437,98 @@ def shortest_path(M,start,goal):
     return current_route
 ```
 
+##### Dynamic Programming
+
+```python
+def print_best_path(j, Q, start, goal):
+print('shortest path and distance to target:')
+sum_costs = 0
+current_node = start
+while current_node != goal:
+print(current_node,'->',end=' ')
+# Move to the next node and increment costs
+next_node = np.argmin(Q[current_node, :] + j)
+sum_costs += Q[current_node, next_node]
+current_node = next_node
+print(goal)
+print('Cost: {:.04f}'.format(sum_costs))
+```
+
+The following function returns the shortest path between a start location and a goal location using Dynamic Programming
+Inputs:
+- M: a Map object (Class Map)
+- start: the starting node index (integer)
+- goal: the target node index (integer)
+Output:
+- a list of integers representing the shortest path from start to goal
+
+Parameters to be initialized include:
+- nodes: list of all intersections of the graph 
+- coordinates: dictionary {node index : \[x,y] location coordinates}
+- neighbours: adjacency list of list \[node_index => \[list of neighbours],...]
+
+We prepare a distance matrix Q which is a square matrix of suze (num_nodes x num_nodes). All invalid pairs have infinite distance. Q is filled with valid graph edge distances. The goal is initialized with 0 distance. 
+
+```python
+def print_best_path(j, Q, start, goal):
+    print('shortest path and distance to target:')
+    sum_costs = 0
+    current_node = start
+    while current_node != goal:
+        print(current_node,'->',end=' ')
+        # Move to the next node and increment costs
+        next_node = np.argmin(Q[current_node, :] + j)
+        sum_costs += Q[current_node, next_node]
+        current_node = next_node
+    print(goal)
+    print('Cost: {:.04f}'.format(sum_costs))
+        
+def shortest_path_DP(M,start,goal):
+    print("shortest path called")
+    print('Minimum traversing distance to reach goal using Dijkstra greedy algorithm: {:.2f}'.format(dijkstra(M, start, goal)))
+    nodes = M._graph.nodes()               
+    coordinates = M.intersections          
+    neighbours = M.roads                   
+    j = np.zeros_like(nodes, dtype='float')
+    next_j = np.empty_like(nodes, dtype='float')
+    Q = np.ones((len(nodes),len(nodes)))
+    Q = Q * np.inf                         
+    for node in nodes:
+        for neighbour in neighbours[node]:
+            if Q[node, neighbour] == np.inf:
+                   Q[node, neighbour] = calculate_distance(node, neighbour, coordinates)
+    Q[goal, goal] = 0
+```
+
+We run an iterative algorithm to converge towars distance values using Bellman equation. We check convergence else iterate and finally print out results
+
+```python
+ max_iter = 500
+    i=0
+    while i < max_iter:
+        for nodeA in nodes:
+            next_j[nodeA] = np.min(Q[nodeA,:] + j) 
+        if np.allclose(next_j, j):   
+            print('iterations converged after',i,'steps with dynamic programming')
+            break
+        else:
+            j[:] = next_j 
+            i+=1
+    print_best_path(j, Q, start, goal) 
+    return Q,j, j[start]
+```
+
+Here, next_j\[nodeA] = np.min(Q\[nodeA,:] + j) is equivalent to 
+
+```python
+lowest_cost = np.inf
+for nodeB in nodes:
+cost = Q[nodeA, nodeB] + j[nodeB]
+if cost < lowest_cost:
+lowest_cost = cost
+next_j[nodeA] = lowest_cost
+```
+
 ### References
 
 ##### Scholarly References
