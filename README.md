@@ -218,13 +218,13 @@ The methodology of the paper "Designing a route planner to facilitate and promot
 	```python
 	conda install osmnx
 	conda install gdal=2.4.4
-```
+    ```
 
 - Install chart_studio in current environment using
 
-```python
-pip install chart_studio
-```
+	```python
+	pip install chart_studio
+	```
 
 #### Code
 
