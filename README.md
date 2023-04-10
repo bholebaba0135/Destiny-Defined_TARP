@@ -135,6 +135,7 @@ id5 -->id5b[4.2 Configuring environment variables]
  - Leaflet Library (Mobile friendly interactive maps)
  - OpenChargeMap API (allows access to open data registry of EV charging points)
  - OpenStreetMap API (allows us to use OSM database)
+ - chart_Studio
 
 #### 2. Databases
  - OpenStreetMap (OSM) - PostgreSQL based
