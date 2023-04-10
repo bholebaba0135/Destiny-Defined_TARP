@@ -355,6 +355,88 @@ Amongst the possible routes, return the shortest one. We Can allow to review and
 	return shortest_route
 ```
 
+##### A* Algorithm
+
+We wish to select and return the location on the frontier having the shortest total estimated path cost to goal. The total cost g+f is the sum of current path cost up to frontier node(g) and estimated straight-line distance from frontier node to goal location. We have 3 inputs:
+
+- routes: dictionary associating nodes on the frontier to a composed of a tuple (route, path length). The tuple contains the sequence of traversed locations from start -> to frontier node and associated path_length
+- goal(int): the goal location
+- coordinates: dictionary with (x,y) coordinates for all nodes in graph
+
+The function returns the location on the frontier having the shortest total estimated path_cost to goal
+
+```python
+def goaltest(location, goal):
+    return location == goal
+def find_nearest_frontier_node_AStar(routes, goal, coordinates):
+    path_costs =  {node:routes[node][1] + calculate_distance(node, goal, coordinates) for node in routes}
+    return [node for node, path_cost in sorted(path_costs.items(), key= lambda x: x[1])][0]
+```
+
+To find the shortest route using A* Algorithm. This function return the shirtest between a start location and a goal location. The inputs are:
+- M: a Map object (Class Map)
+- start: the starting node index (integer)
+- goal: the target node index (integer)
+
+The function returns a list of integers representing the shortest path from start to goal.
+We initialize parameters:
+- coordinates:  dictionary {node index : \[x,y] location coordinates}
+- neighbours: adjacency list of list \[node_index => \[list of neighbours],...]
+- explored: set for locations marked as explored
+- frontier: dictionary associating nodes on the frontier to a composed of a tuple (route, path length).
+
+The route is the sequence of traversed locations from start to frontier node. Steps:
+- Identify shortest route to the target goal with A* algorithm
+    - While there is node on the frontier, select the one with shortest distance to start (greedy approach)
+    - Collect identified route up to this node on the frontier
+    - If frontier node with shortest path = goal then we found the shortest path
+    - Remove node from frontier
+    - Mark node as explored
+    - Visit all neighbours of the selected node on the frontier
+        - Add neighbour to the route. use deepcopy to preserve current_route unchanged for re-use in for loop
+        - Calculate step_cost to transition to the neighbour from frontier node
+        - Update path cost with new step cost
+        - If the neighbour is already explored do nothing and move to next neighbour
+            - If the neighbour is not already on the frontier, add it to the frontier with its (route, path_cost)
+            - if the neighbour is already on the frontier, then update frontier if the new route is shorter
+                - Collect the path cost of the route already on the frontier
+                - Compare path cost with new route
+                    - Update frontier with new route if the route is shorter, dropping the older one
+    - Return the shortest route
+
+```python
+def shortest_path(M,start,goal):
+    print("shortest path called")
+    print('Minimum traversing distance to reach goal using Dijkstra greedy algorithm: {:.2f}'.format(dijkstra(M, start, goal)))
+    coordinates = M.intersections       
+    neighbours = M.roads                
+    explored = set()                    
+    frontier = {start:([start], 0)}      
+    while len(frontier) > 0:
+        current_node = find_nearest_frontier_node_AStar(frontier, goal, coordinates)
+        current_route, path_cost = frontier[current_node]
+
+        if goaltest(current_node, goal):
+            break
+        frontier.pop(current_node)
+
+        explored.add(current_node)
+        for neighbour in neighbours[current_node]:
+            new_route = deepcopy(current_route)
+            new_route.append(neighbour)
+            step_cost = calculate_distance(current_node, neighbour, coordinates)
+            new_path_cost = path_cost + step_cost
+            if neighbour not in explored:
+                if neighbour not in frontier:
+                    frontier[neighbour] = (new_route, new_path_cost) 
+                else:
+                    existing_cost = frontier[neighbour][1]
+                    if new_path_cost < existing_cost:
+                        frontier[neighbour] = (new_route, new_path_cost)
+    print('Minimum traversing distance to reach goal using A* algorithm: {:.2f}'.format(frontier[goal][1]))
+    return current_route
+```
+
 ### References
 
 ##### Scholarly References
