@@ -214,14 +214,16 @@ The methodology of the paper "Designing a route planner to facilitate and promot
 #### Configuring the environment and installing the Dependencies
 
 - Install osmnx
+
 	```python
 	conda install osmnx
 	conda install gdal=2.4.4
 ```
 
 - Install chart_studio in current environment using
-	```python
-	pip install chart_studio
+
+```python
+pip install chart_studio
 ```
 
 #### Code
@@ -305,7 +307,8 @@ To Identify all possible routes to the target goal with Uniform Cost algorithm
 ```
 
 Visit all neighbours of the selected node on the frontier
-	- add neighbour to the route. use deepcopy to preserve current_route unchanged for later re-use
+-  Steps:
+	-  add neighbour to the route. use deepcopy to preserve current_route unchanged for later re-use
 	- calculate step_cost to transition to the neighbour from frontier node
 	- update path cost with new step cost
 	- if the neighbour is the target then store the tuple (route, path_cost) as a candidate
