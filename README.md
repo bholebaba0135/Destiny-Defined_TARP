@@ -209,6 +209,149 @@ Data Collection: The authors collected data from multiple sources such as OpenSt
 ##### 6. Paper title : Designing a route planner to facilitate and promote cycling in Metro Vancouver,Canada<br><br> 
 The methodology of the paper "Designing a route planner to facilitate and promote cycling in Metro Vancouver, Canada" involves the development of a cycling route planner that incorporates various factors that influence the choice of cycling as a mode of transport. The planner is designed using a geographical information system-based approach and includes variables such as distance, elevation gain, safety, route features, air pollution, and links to transit. The planner also allows for the incorporation of multiple user preferences in route selection, uses topology to minimize data storage redundancy, and relies on node/vertex index tables to increase the efficiency of the route selection process. Overall, the methodology involves the integration of various technological and user-centered approaches to develop a cycling route planner that is effective and user-friendly.
 
+### Development
+
+#### Configuring the environment and installing the Dependencies
+
+- Install osmnx
+	```python
+	conda install osmnx
+	conda install gdal=2.4.4
+```
+
+- Install chart_studio in current environment using
+	```python
+	pip install chart_studio
+```
+
+#### Code
+
+##### Finding mimimum path cost using Djikstra
+
+```python
+def extract_min_vertex_from_queue(distances, queue):
+dist_for_queue = {k:distances[k] for k in queue}
+return [k for k,v in sorted(dist_for_queue.items(), key= lambda x: x[1])][0]
+def dijkstra(M, start_node, end_node):
+# initialize parameters
+coordinates = M.intersections 
+distances = {node: np.inf for node in M._graph.nodes()}
+distances[start_node] = 0
+queue = M._graph.nodes()
+while queue != []:
+current_node = extract_min_vertex_from_queue(distances, queue)
+queue.remove(current_node)
+for neighbour in M.roads[current_node]:
+dist = distances[current_node] + calculate_distance(current_node, neighbour, coordinates)
+if dist < distances[neighbour]:
+distances[neighbour] = dist
+return distances[end_node]
+
+```
+
+##### Uniform Cost Algorithm
+
+We are calculating the distance between 2 locations using their coordinates by pythagoras theorom. Inputs are nodeA(int) and nodeB(int). Coordinates can be represented in the form os dictionary with (x,y) coordinates for all nodes in the graph. The function returns euclidean distance between 2 points A and B
+
+```python
+def calculate_distance(nodeA, nodeB, coordinates):
+    xa,ya = coordinates[nodeA]
+    xb,yb = coordinates[nodeB]
+    return np.sqrt( (xa-xb)**2 + (ya-yb)**2 )
+```
+
+The function selects and return the location on the frontier having the shortest path_cost. The input here is  routes represented by the dictionary associating nodes on the frontier to a composed of a tuple (route, path length). The route is the sequence of traversed locations from start -> to frontier node. The function returns the location on the frontier having the shortest path_cost
+
+```python
+def find_nearest_frontier_node(routes):
+    path_costs =  {node:routes[node][1] for node in routes}
+    return [node for node,path_cost in sorted(path_costs.items(), key= lambda x: x[1])][0]
+
+```
+
+The function below return the shortests path between a start location and a goal location calculated with uniform cost algorithm. The inputs are M which represents a map object (Class Map), start which represents the starting node index (integer) and goal which represents the target node index (integer). The output includes a list of integers representing shortest path. It is the informative function indicating the minimum path cost using djikstra
+
+```python
+def shortest_path_Uniform_Cost_Search(M,start,goal):
+    print("shortest path called")
+    print('Minimum traversing distance to reach goal using Dijkstra greedy algorithm: {:.2f}'.format(dijkstra(M, start, goal)))
+    coordinates = M.intersections       
+    neighbours = M.roads                
+    explored = set()                   
+    frontier = {start:([start], 0)}     
+    candidates = [] 
+
+```
+
+The route is the sequence of traversed locations from start -> to frontier node
+- Coordinates: dictionary  {node index : \[x,y] location coordinates}
+- neigbours: adjacency list of list \[node_index => \[list of neighbours],...]
+- explored: set for locations marked as explored
+- frontier: dictionary associating nodes on the frontier to a composed of a tuple (route, path length). 
+- candidates: list for all possible routes found (from start to goal). Tuple: (route, path_length)
+
+To Identify all possible routes to the target goal with Uniform Cost algorithm 
+	- while there is node on the frontier, select the one with shortest distance to start (greedy approach)
+	- collect identified route up to this node on the frontier
+	- remove node from frontier
+	- mark node as explored
+
+```python
+	while len(frontier) > 0:
+	    current_node = find_nearest_frontier_node(frontier)
+	    current_route, path_cost = frontier[current_node]
+	    frontier.pop(current_node)
+	    explored.add(current_node)
+```
+
+Visit all neighbours of the selected node on the frontier
+	- add neighbour to the route. use deepcopy to preserve current_route unchanged for later re-use
+	- calculate step_cost to transition to the neighbour from frontier node
+	- update path cost with new step cost
+	- if the neighbour is the target then store the tuple (route, path_cost) as a candidate
+	- if the neighbour is already explored do nothing and move to next neighbour
+		- if the neighbour is not already on the frontier, add it to the frontier with its (route, path_cost)
+		- if the neighbour is already on the frontier, then update frontier if the new route is shorter
+		- collect the path cost of the route already on the frontier
+			- compare path cost with new route
+			- update frontier with new route if the route is shorter, dropping the older one
+
+```python
+		for neighbour in neighbours[current_node]:
+	    new_route = deepcopy(current_route)
+	     new_route.append(neighbour)
+	     step_cost = calculate_distance(current_node, neighbour, coordinates)
+	     new_path_cost = path_cost + step_cost
+	
+	    if neighbour == goal:
+	        candidates.append((new_route, new_path_cost))
+	    elif neighbour not in explored:
+	        if neighbour not in frontier:
+	            frontier[neighbour] = (new_route, new_path_cost) 
+	        else:
+	            existing_cost = frontier[neighbour][1]
+	            if new_path_cost < existing_cost:
+	                frontier[neighbour] = (new_route, new_path_cost)
+```
+
+Amongst the possible routes, return the shortest one. We Can allow to review and select alternative routes instead of shortest one.
+
+```python
+	 shortest_route = None
+	 shortest_distance = None
+	 for candidate, path_cost in candidates:
+	        if not shortest_route:
+	            shortest_route = candidate
+	            shortest_distance = path_cost
+	        elif path_cost < shortest_distance:
+	            shortest_route = candidate
+	            shortest_distance = path_cost
+	 for candidate in candidates:
+	        print(candidate)
+	 print('Minimum traversing distance to reach goal using Uniform Cost greedy algorithm: {:.2f}'.format(shortest_distance))
+	return shortest_route
+```
+
 ### References
 
 ##### Scholarly References

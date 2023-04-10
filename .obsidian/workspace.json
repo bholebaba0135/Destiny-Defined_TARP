@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5,
-    "collapsed": true
+    "width": 222.5
   },
   "right": {
     "id": "1652b8b1d00b9371",
@@ -150,10 +149,10 @@
   "active": "b6f72c98060ec136",
   "lastOpenFiles": [
     "Zotero Template.md",
-    "Untitled.canvas",
+    "osm.md.md",
     "README.md",
     "Workflow.md",
-    "osm.md",
+    "Untitled.canvas",
     "osm_data.png"
   ]
 }
