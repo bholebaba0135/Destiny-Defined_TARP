@@ -45,10 +45,57 @@ The iterative nature provides for error correction at the end of each phase lead
 
 ### Roles_and_Responsibilities
 
-1. Dynamic Web Interface: Prakhar Goyal (20BCE2211) and Harshit Jaiswal (20BCE2157)
-2. Synchronizing search request to open source Map Data: Pranjal Choudhary (20BCE0571) and Anmol Gupta (20BCB0135)
-3. Determination of most optimal Path : Vivek Rathore (20BCE0573) and Aditya Singh Rathore (20BCE0730)
+1. User Interface Design and Development: Prakhar Goyal (20BCE2211) and Harshit Jaiswal (20BCE2157)
+
+	Prakhar Goyal: Responsible for designing the user interface for the route planner using HTML, CSS, and JavaScript. This includes designing the layout, creating interactive features such as input forms and maps, and ensuring the user interface is intuitive and user-friendly. Milestones include:
+	- Designing the layout and basic functionality of the user interface 
+       - Creating interactive features such as input forms and maps 
+       - Incorporating feedback from user testing and improving the user interface 
+       
+	Harshit Jaiswal: Responsible for implementing the user interface using a front-end framework. This includes writing code to create the interactive features, integrating the user interface with the routing algorithm, and ensuring the user interface is responsive and accessible.. Milestones include:
+	- Implementing the user interface using a front-end framework 
+       - Integrating the user interface with the routing algorithm 
+       - Ensuring the user interface is responsive and accessible by conducting user testing and making necessary improvements 
+       
+
+2. Synchronizing search request to open source Map Data and Data Processing: Pranjal Choudhary (20BCE0571) and Anmol Gupta (20BCB0135)
+
+	Anmol Gupta: Responsible for downloading and processing OpenStreetMap data using OSMnx and NetworkX. This includes downloading the relevant data for the area of interest, creating a street network graph using OSMnx and NetworkX, and identifying any missing or incorrect data that needs to be corrected. Milestones include:
+	- Downloading and processing the relevant OpenStreetMap data 
+       - Identifying any missing or incorrect data and creating a plan to correct it 
+       - Creating a street network graph that accurately represents the road network and intersections.
+       
+	Pranjal Choudhary: Responsible for cleaning and preparing the data for use in the route planner using tools such as GeoPandas and PostgreSQL/PostGIS. This includes removing any duplicate or irrelevant data, converting the data into a format that can be easily used by the routing algorithm, and storing the data in a database using PostgreSQL/PostGIS. Milestones include:
+	- Cleaning and preparing the OpenStreetMap data 
+       - Storing the cleaned data in a PostgreSQL/PostGIS database 
+       - Creating a plan for maintaining and updating the database throughout the project.
+	
+
+3. Routing Algorithm Development : Vivek Rathore (20BCE0573) and Aditya Singh Rathore (20BCE0730)
+
+	Vivek Rathore: Responsible for implementing and optimizing the routing algorithm using PyrouteLib. This includes writing code to calculate the shortest path between multiple destinations, optimizing the algorithm for efficiency, and incorporating factors such as traffic conditions or user preferences. Milestones include:
+	- Implementing a basic routing algorithm 
+       - Optimizing the algorithm for efficiency and accuracy 
+       - Incorporating additional factors such as traffic conditions or user preferences 
+       
+	Aditya Sign Rathore: Responsible for testing and validating the routing algorithm to ensure accuracy and efficiency. This includes designing test cases to ensure the algorithm produces correct results, identifying and resolving any bugs or issues, and validating the algorithm against real-world data. Milestones include:
+	- Designing and executing test cases to ensure the algorithm produces correct results 
+       - Identifying and resolving any bugs or issues 
+       - Validating the algorithm against real-world data 
+
 4. Highlighting the calculated route on GMaps : Rama Krishna Mohapatro (20BCE0877) and Pallav Jyoti Buragohain (20BCE0866)
+
+	Ramakrishna: Responsible for designing and developing the interactive map interface that displays the calculated route. This includes selecting a suitable mapping library, integrating it with the routing algorithm, and adding features such as zoom and pan controls, street view, and location search. Milestones include:
+	- Researching and selecting a mapping library 
+       - Integrating the mapping library with the routing algorithm and implementing basic map features 
+       - Adding advanced map features and refining the user interface based on feedback from user testing 
+       
+	Pallav: Responsible for implementing the algorithm that highlights the calculated route on the map. This includes converting the routing algorithm output to a format that is compatible with the mapping library, and using it to draw the route on the map. Milestones include:
+	
+	- Researching the format required by the mapping library and developing a converter 
+	- Integrating the converter with the routing algorithm and implementing the route drawing feature 
+	- Refining the route drawing feature based on feedback from user testing 
+
 5. <i><b>Note:</b> Visit [here](Workflow.md) to checkout the workflow</i>
 
 #### Workflow
@@ -191,19 +238,27 @@ id5 -->id5b[4.2 Configuring environment variables]
 ### Software_Requirements
 
 #### 1. Dependencies
+
  - mermaid-js (for documentation)
- - HTML, Tailwind CSS and Vanilla Javascript (For dynamic web UI)
- - Nominatim API (Allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
- - Leaflet Library (Mobile friendly interactive maps)
- - OpenChargeMap API (allows access to open data registry of EV charging points)
- - OpenStreetMap API (allows us to use OSM database)
- - chart_Studio
+ - HTML, Tailwind CSS and Vanilla Javascript : These will be used to build dynamic web UI)
+ - Nominatim API : It allows geocoding and reverse geocoding which in turn allows to both search a coordinate by name as well as find the coordinates of a destination to determine the closest nodes/destinations tot that destination)
+ - OpenStreetMap: OSM provides the data needed for the route planner. The OSM data includes information on roads, buildings, and other features, which can be used to generate routes between multiple destinations. The first step would be to download the relevant OSM data for the area of interest. 
+ - OSMnx: It can be used to download and process OpenStreetMap data. It can be used to extract street networks, calculate shortest paths, and generate graphs and visualizations. After downloading the relevant OSM data, OSMnx can be used to create a street network graph, which represents the road network and intersections. This graph can then be used to calculate the shortest paths between multiple destinations.
+ - NetworkX: It can be used to create, manipulate, and analyze complex networks. It can be used to generate graphs, calculate shortest paths, and perform other network analysis tasks. NetworkX can be used in conjunction with OSMnx to create a graph of the street network and calculate the shortest paths between multiple destinations.
+ - PyRouteLib: It can be used to calculate optimal routes on street networks. It can be used to calculate the shortest path between multiple destinations based on factors such as distance, time, or traffic conditions. Once the street network graph has been created using OSMnx and NetworkX, PyrouteLib can be used to calculate the optimal route between multiple destination.
+ - GeoPandas: It provides tools for working with geospatial data. It can be used to load and manipulate OpenStreetMap data, calculate distances and areas, and perform other spatial analysis tasks. GeoPandas can be used to load the OSM data and perform spatial queries, such as identifying the nearest points of interest to each destination.
+ - Leaflet: It is a JavaScript library for interactive maps. It can be used to create maps that display the routes generated by the planner and provide interactive features such as zooming and panning. Once the optimal route has been calculated, Leaflet can be used to display the route on an interactive map.
+ - PostgreSQL/PostGIS: PostgreSQL is a popular open-source relational database management system, and PostGIS is an extension that adds support for geospatial data. Together, they can be used to store and query large amounts of OpenStreetMap data and perform complex spatial analysis tasks. PostgreSQL/PostGIS can be used to store the OSM data and perform advanced spatial queries, such as identifying the shortest path between multiple destinations that passes through specific points of interest.
+
+OpenStreetMap provides the base data for the planner, OSMnx and NetworkX are used to create the street network graph and calculate the shortest paths between multiple destinations, PyrouteLib is used to calculate the optimal route, GeoPandas is used to load and manipulate the OSM data and perform spatial analysis tasks, Leaflet is used to display the route on an interactive map, and PostgreSQL/PostGIS is used to store the OSM data and perform advanced spatial queries.
 
 #### 2. Databases
  - OpenStreetMap (OSM) - PostgreSQL based
 
+
     ![](osm_data.png)
 
+ 
  - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
  
 
