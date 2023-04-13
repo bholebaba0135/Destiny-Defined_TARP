@@ -4,10 +4,37 @@
 
 Travel Itinerary Planner
 
+### Index
+
+1.  [Objective](#Objective)
+2. [Development Model](#Development_Model)
+3. [Roles and Responsibilities](#Roles_and_Responsibilities)
+	1. [Workflow](#Workflow)
+		1. [Accessing the Project](#Accessing_the_project)
+		2. [Contributing to the Project](#Contributing_to_the_project)
+		3. [Zotero Integration with Obsidian](#Zotero_Integration_with_Obsidian)
+	2. [Activity Flow Diagram](#FlowChart)
+	3. [Gantt Chart](#Gantt_Chart)
+	4. [Work Breakdown Structure](#Activity_based_Work_Breakdown_Structure )
+5. [Software Requirements](#Software_Requirements)
+	1. [Dependencies](#Dependencies)
+	2. [Databases](#Databases)
+	3. [Development_Environment](#Development_Environment)
+6. [Hardware Requirements](#Hardware_Requirements)
+7. [Literature Survey](#Literature_Survey)
+8. [Methodologies](#Methodologies)
+9. [Development](#Development)
+10. [References](#References)
+	1. [Scholarly References](#Scholarly_References)
+	2. [Web References](#Web_References)
+	3. [Learning Resources](#Learning_Resources)
+ 
+
+
 ### Objective
 We wish to build a web app that would enable tourists who may wish to travel to multiple destinations in a new city to navigate the shortest route without passing the same street twice. This would prove to be really useful in travel planning. 
 
-### Development Model
+### Development_Model
 
 Iterative Waterfall<br>
 <br>
@@ -16,7 +43,7 @@ Each phase is executed only when the previous phase is completed, so it is a ste
 It is suitable for small scale projects with low risks, when quality is preferred over cost and requirements are well-known upfront.
 The iterative nature provides for error correction at the end of each phase leading to less errors in the final testing phase.
 
-### Roles and Responsibilities
+### Roles_and_Responsibilities
 
 1. Dynamic Web Interface: Prakhar Goyal (20BCE2211) and Harshit Jaiswal (20BCE2157)
 2. Synchronizing search request to open source Map Data: Pranjal Choudhary (20BCE0571) and Anmol Gupta (20BCB0135)
@@ -24,6 +51,41 @@ The iterative nature provides for error correction at the end of each phase lead
 4. Highlighting the calculated route on GMaps : Rama Krishna Mohapatro (20BCE0877) and Pallav Jyoti Buragohain (20BCE0866)
 5. <i><b>Note:</b> Visit [here](Workflow.md) to checkout the workflow</i>
 
+#### Workflow
+
+#### Accessing_the_project
+
+- Make sure you have git installed and added as your device's ystem environment variable
+- Go the [project](https://github.com/bholebaba0135/Destiny-Defined_TARP) 
+- Click on Code and copy the HTTPS link
+- Right click and click on Git Bash in a folder and type command "git clone copied_link"
+-  Run Obsidian and click on Open folder as vault. Navigate and select the folder that was extracted from zip named 'Destiny-Defined_TARP'
+
+#### Contributing_to_the_project
+
+- Right click and click on 'Git Bash Here' in your 'Destiny-Defined_TARP' folder.
+- Enter 'git checkout your_name' (Needed to be done just the first time you use Obsidian not everytime)
+- Edit, make changes and add your part to the markdown now opened in your Obsidian vault.
+- Enter the command 'git add .' to move all the changes you made to the staging area
+- Enter git commit -m "Short message describing the changes"
+- Enter git push.
+
+#### Zotero_Integration_with_Obsidian
+
+- Download Zotero 6 for Windows from [here](https://www.zotero.org/download/)
+- Install Zotero and launch the application
+- Click [here](https://github.com/retorquere/zotero-better-bibtex/releases/tag/v6.7.62) and click on .xpi file to download it
+- Go to Tools -> Add ons on Zotero
+- Drag and drop the downloaded .xpi file into the Add ons Window
+- Click on Restart Now
+- Open Obsidian and click on Settings
+- Go to Community plugins -> Browse
+- Search for Zotero Integration, Install and enable it.
+- Now go back and go to 'Zotero Integration' under Community plugins and:
+	- Download pdf utility
+	- Enable Auto Concatenaton
+	- Click on 'Add Citation Format' and name it APA. Select Style as American Psychological Association 7th edition from dropdown.
+	- Click on 'Add Import Format'
 
 ### FlowChart
 
@@ -40,7 +102,7 @@ id12 --> id13[\Highlight the caclulated route on Google Maps\] -->id14([Stop])
 ```
 
 
-### Gantt Chart
+### Gantt_Chart
 
 ```mermaid
 gantt
@@ -66,7 +128,7 @@ Deploying the web app: after a7, 15d
 
 ```
 
-### Activity-based Work Breakdown Structure
+### Activity_based_Work_Breakdown_Structure 
 
 ```mermaid
 graph TD
@@ -126,7 +188,7 @@ id5 -->id5b[4.2 Configuring environment variables]
 
 ```
 
-### Software Requirements
+### Software_Requirements
 
 #### 1. Dependencies
  - mermaid-js (for documentation)
@@ -145,7 +207,7 @@ id5 -->id5b[4.2 Configuring environment variables]
  - pgRouting (Represents the city as a weighted graph and helps implement several routing algorithms)
  
 
-#### 3. Development Environment 
+#### 3. Development_Environment 
 
 Code Editor: VS Code, Jupyter<br>
 MarkDown Editor : Obsidian<br>
@@ -155,7 +217,7 @@ FTP Client: FileZilla, CyberDuck<br>
 Version Control: Git<br>
 Module Integration: Github
 
-### Hardware Requirements
+### Hardware_Requirements
 
 Operating System: Windows 8 or later<br>
 Processor: Intel Pentium 4 or later<br>
@@ -165,7 +227,7 @@ Internet upstream Bandwidth: 2Mbps or more<br>
 Browser: Chrome/Edge/Firefox
 
 
-###   Literature Survey
+### Literature_Survey
 
 |  Title  |  Author  |  Algorithm and dataset  |  Important Findings  |  Limitations  |  References  |
 | --- | --- | --- | --- | --- | --- |
@@ -530,18 +592,17 @@ lowest_cost = cost
 next_j[nodeA] = lowest_cost
 ```
 
+
 ### References
 
-##### Scholarly References
+##### Scholarly_References
 - Huang, Y., Ying, J. J. C., Yu, P. S., & Tseng, V. S. (2020). Dynamic graph mining for multi-weight multi-destination route planning with deadlines constraints. ACM Transactions on Knowledge Discovery from Data (TKDD), 15(1), 1-32. [[doi link]](https://doi.org/10.1145/3412363)
 - Chowdhury, S., & Giacaman, N. (2015). En-route planning of multi-destination public-transport trips using smartphones. Journal of Public Transportation, 18(4), 31-45. [[doi link]](https://doi.org/10.5038/2375-0901.18.4.3)
 - Hakeem, A., Gehani, N., Ding, X., Curtmola, R., & Borcea, C. (2019, November). Multi-destination vehicular route planning with parking and traffic constraints. In Proceedings of the 16th EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (pp. 298-307) [[doi link]](https://doi.org/10.1145/3360774.3360824)
 - Nanayakkara, S. C., Srinivasan, D., Lup, L. W., German, X., Taylor, E., & Ong, S. H. (2007, September). Genetic algorithm based route planner for large urban street networks. In 2007 IEEE Congress on Evolutionary Computation (pp. 4469-4474). IEEE [[doi link]](https://doi.org/10.1109/CEC.2007.4425056)
 - Edelkamp, S., Jabbar, S., & Willhalm, T. (2005). Geometric travel planning. IEEE Transactions on Intelligent Transportation Systems, 6(1), 5-16. [[doi link]](https://doi.org/10.1109/TITS.2004.838182)
 
-
-
-##### Web References
+##### Web_References
 - https://pgrouting.org/
 - https://www.openstreetmap.org/
 - https://developers.google.com/maps/documentation/javascript/distancematrix
@@ -551,7 +612,7 @@ next_j[nodeA] = lowest_cost
 - https://memgraph.com/blog/how-to-build-a-route-planning-application-with-breadth-first-search-and-dijkstras-algorithm
 - https://towardsdatascience.com/driving-distance-between-two-or-more-places-in-python-89779d691def
 
-##### Learning Resources
+##### Learning_Resources
 - [Markdown cheatsheet for preparing Readme.md](https://github.com/christianlempa/cheat-sheets/blob/main/misc/markdown.md)
 - [How to use an API tutorial](https://www.youtube.com/watch?v=WXsD0ZgxjRw)
 - [pgRouting Workshop - Self Study](http://workshop.pgrouting.org/2.8/en/index.html)
