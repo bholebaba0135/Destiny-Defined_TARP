@@ -198,6 +198,12 @@ The research provides a multi-objective hyper-heuristic (MOHH) framework for sma
 ##### 4. Paper Title: Fast and Safe Route Planning Project
 Using GPS data from multiple files with different paths, the project finds the optimum route between a source and destination. Pre-processing and cleansing GPS data removes noise, missing data, and undesirable data. The optimum route is calculated using route parameters like turns, stops, and time. The project comprises processing GPS file data, creating KML files, visualising charts, and using a cost function to discover the optimum path. Preprocessing, cost function implementation, and route attribute analysis are the steps. Commercial applications include identifying the optimal route for automobiles to save time, turns, and speed.
 
+### Furthur Reading
+##### Thesis Title: Multi-Modal Route Planning in Road and Transit Networks
+The thesis discusses a technique that combines an algorithm for road networks with an algorithm for public transit networks, resulting in a generic algorithm capable of computing routes on combined networks. The approach involves selecting access nodes for both the source and destination nodes in the road network, where one can switch from the road network to the public transit network. The technique uses the road algorithm for the source to its access nodes, the transit algorithm for the access nodes of the source to the access nodes of the destination, and the road algorithm again for the destination's access nodes to the destination. Although the resulting algorithm may not provide the shortest path, it is significantly faster than without the limitations, making it a useful tool for computing routes.
+
+Dijkstra's algorithm settles the shortest path distance to a node, and all nodes closer to the source have already been settled in a previous round. However, the algorithm explores the graph in all directions equally, without any sense of goal direction. The A* algorithm extends Dijkstra's algorithm by improving its efficiency through steering the exploration towards the target. A heuristic is used to approximate the direction since computing the exact goal direction is as difficult as computing the shortest path. The choice of heuristic depends on the network and may not always improve over Dijkstra's algorithm. In the best case, the algorithm only explores the nodes on the shortest path.
+
 ### References
 
 ##### Scholarly References
