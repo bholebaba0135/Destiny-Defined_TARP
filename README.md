@@ -195,6 +195,9 @@ The approach discretizes the geographical region hierarchically into grids, land
 ##### 3. Paper Title: Parallel Hyper-Heuristic Algorithm for Multi-Objective Route Planning in a Smart City
 The research provides a multi-objective hyper-heuristic (MOHH) framework for smart city walking route planning. Low-level heuristics generate new routes, and reinforcement learning selects good heuristics to speed up search. Using a general-purpose graphics processing unit, the reinforcement learning-based multi-objective hyper-heuristic (RL-MOHH) algorithm is improved and parallelized. A historical New York City safety-index map is extensively tested.
 
+##### 4. Paper Title: Fast and Safe Route Planning Project
+Using GPS data from multiple files with different paths, the project finds the optimum route between a source and destination. Pre-processing and cleansing GPS data removes noise, missing data, and undesirable data. The optimum route is calculated using route parameters like turns, stops, and time. The project comprises processing GPS file data, creating KML files, visualising charts, and using a cost function to discover the optimum path. Preprocessing, cost function implementation, and route attribute analysis are the steps. Commercial applications include identifying the optimal route for automobiles to save time, turns, and speed.
+
 ### References
 
 ##### Scholarly References
