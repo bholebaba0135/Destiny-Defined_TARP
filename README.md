@@ -709,8 +709,8 @@ We thus used 10 custom generated graphs with nodes ranging from 21 to 70 and wei
 
 A web interface was also developed for our project. The main objective was to provide users with a convenient and user-friendly platform for planning their routes to multiple destinations. Overall, the web interface was successful in achieving its primary goal. The interface was easy to navigate and allowed users to input multiple destinations and calculate the optimal route. The interface also provided users with real-time traffic updates and allowed them to customize their routes based on their preferences. We were unfortunately unable to deploy the web interface with our routing algorithm due to the paid nature of certain APIs that were used.
 
-![](assets/web1.JPEG)
-![](assets/web2.JPEG)
+![](assets/web1.jpeg)
+![](assets/web2.jpeg)
 
 To improve the quality of our shortest paths, access node selection needs to be improved. It should not solely be based on vicinity. Stops should be ordered in a certain priority, measuring their importance for the network. Ideally, a stop is important if it is part of many shortest paths. A simple hierarchy can be obtained by counting the amount of connections available at a certain stop. The more connections, the more likely it is important. The hierarchy can be further fine tuned by injecting query logs of other applications or manually selecting big main stations before smaller stops.
 Another important aspect is to greatly expand the amount of metadata displayed next to a computed journey in the front end. An application that is to be used by clients must give extensive information on routes. Not only the name of a street and identification numbers of trains, but also include precise information on a road type, possible restrictions, access to the complete schedule of the trip of a transit vehicle, cost, and possibly even include forecasts for traffic congestion.
