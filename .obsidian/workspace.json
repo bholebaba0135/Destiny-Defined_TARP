@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 222.5,
-    "collapsed": true
+    "width": 222.5
   },
   "right": {
     "id": "1652b8b1d00b9371",
@@ -149,11 +148,26 @@
   },
   "active": "b6f72c98060ec136",
   "lastOpenFiles": [
-    "Zotero Template.md",
-    "Untitled.canvas",
+    "assets/proof of submit.PNG",
+    "assets/web2.jpeg",
+    "assets/web2.jpeg.crdownload",
+    "assets/web1.jpeg",
+    "assets/web1.jpeg.crdownload",
+    "cache/e849d8722a417ca6b08cfd108e0acf1339a06f41.json",
+    "assets/karn5.PNG",
+    "assets/karn4.PNG",
+    "assets/karn3.PNG",
+    "assets/karn2.PNG",
+    "assets/karn1.PNG",
+    "assets/vel5.PNG",
+    "assets/vel4.PNG",
+    "assets/vel3.PNG",
     "README.md",
     "Workflow.md",
-    "osm.md",
-    "osm_data.png"
+    "Routing.ipynb",
+    "Help.py.ipynb",
+    "Zotero Template.md",
+    "osm.md.md",
+    "Untitled.canvas"
   ]
 }
