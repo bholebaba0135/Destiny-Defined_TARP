@@ -18,9 +18,9 @@
 10. [Requirement](#Requirements)
 11. [Result and Discussion](#Result_and_Discussion)
 12. [Video Demonstration](#Video_Demonstration)
-13.  [Workflow](#Workflow)
-	1. [Accessing the Project](#Accessing_the_project)
-	2. [Contributing to the Project](#Contributing_to_the_project)
+13.  [Workflow](#Workflow) 
+	1. [Accessing the Project](#Accessing_the_project) 
+	2. [Contributing to the Project](#Contributing_to_the_project) 
 	3. [Zotero Integration with Obsidian](#Zotero_Integration_with_Obsidian)
 14. [Appendix](#Appendix)
 	1. [Activity Flow Diagram](#FlowChart)
@@ -646,8 +646,75 @@ Initially we extracted the OpenStreetMap Data on VIT Vellore. However, the graph
 
 ![](assets/vit_graph.PNG)
 
-But the opera
+But the operation could not be performed as the Graph variable was empty. We tried changing the network type to 'drive' and this time the nodes were discovered. This was because the dataset apparently had no data on bikes for the campus area. 
 
+We thus expanded the area of inspection to the whole Vellore City.
+
+![](assets/streetGraphNetwork.PNG)
+
+We now faced 2 new challenges. Firstly, we couldnt just pick any 2 nodes from the list of nodes available to us as it is possible that there exists no direct path between those 2 nodes. So, we took a target node and a source node and found the shortest path between those two nodes. We created a set of all nodes in that path. We looped though all the nodes to check if a path exists to the target node. This way fetched a list of nodes for which a path existed to the target node.
+
+We then tried creating a subgraph from this list of nodes. We did this by fetching the list of nodes in the graph and initializing the list to store the nodes for which a subgraph could be drawn. We had to loop through all the nodes in the graph, create a set in each iteration, remove the current node from the set, looping through all other nodes in the set and checking if a path existed between the current node and the other node.
+
+Due to the dataset of Vellore being considerably dense, the processing time was very high (arounf 10 minutes). The same process when implemented on Vellore Institute of Tehnology dataset on the other hand, fetched a sub graph on which routing couldnt be performed.
+
+![](assets/vitsub.PNG)
+
+We then decided to choose 3 cities, Vellore, Karnal and Patna and tried creating 5 subgraphs for each of the three cities taking a random of 60 to 360 nodes for each graph. The results we got were disappointing to say the least because of two reasons. Firstly, in 95% of the graphs generated the number of visible edges were hardly 2 to 3. And most of the times the nodes picked at random would not have any edge at all leading to premature termiantion of the program. In fact, we never really managed to generate the sub graph for the third city in the list since the program would terminate halfway throught the second city.
+
+Subgraphs generated for Vellore:
+
+![](assets/vel1.PNG)
+
+![](assets/vel2.PNG)
+
+![](assets/vel3.PNG)
+
+![](assets/vel4.PNG)
+
+![](assets/vel5.PNG)
+
+Subgraphs for Karnal, Haryana:
+
+![](assets/karn1.PNG)
+
+![](assets/karn2.PNG)
+
+![](assets/karn3.PNG)
+
+![](assets/karn4.PNG)
+
+![](assets/karn5.PNG)
+
+We thus used 10 custom generated graphs with nodes ranging from 21 to 70 and weights randomly assigned to test the efficacy of our routing algorithm.
+
+![](assets/custom2.PNG)
+
+![](assets/custom3.PNG)
+
+![](assets/custom4.PNG)
+
+![](assets/custom5.PNG)
+
+![](assets/custom6.PNG)
+
+![](assets/custom7.PNG)
+
+![](assets/custom8.PNG)
+
+![](assets/custom9.PNG)
+
+![](assets/custom10.PNG)
+
+A web interface was also developed for our project. The main objective was to provide users with a convenient and user-friendly platform for planning their routes to multiple destinations. Overall, the web interface was successful in achieving its primary goal. The interface was easy to navigate and allowed users to input multiple destinations and calculate the optimal route. The interface also provided users with real-time traffic updates and allowed them to customize their routes based on their preferences. We were unfortunately unable to deploy the web interface with our routing algorithm due to the paid nature of certain APIs that were used.
+
+![](assets/web1.JPEG)
+![](assets/web2.JPEG)
+
+To improve the quality of our shortest paths, access node selection needs to be improved. It should not solely be based on vicinity. Stops should be ordered in a certain priority, measuring their importance for the network. Ideally, a stop is important if it is part of many shortest paths. A simple hierarchy can be obtained by counting the amount of connections available at a certain stop. The more connections, the more likely it is important. The hierarchy can be further fine tuned by injecting query logs of other applications or manually selecting big main stations before smaller stops.
+Another important aspect is to greatly expand the amount of metadata displayed next to a computed journey in the front end. An application that is to be used by clients must give extensive information on routes. Not only the name of a street and identification numbers of trains, but also include precise information on a road type, possible restrictions, access to the complete schedule of the trip of a transit vehicle, cost, and possibly even include forecasts for traffic congestion.
+Currently, the OptiRoute planner operates on a static dataset of locations and travel times. It would be interesting to explore the feasibility of real-time optimization, where the planner takes into account traffic conditions, road closures, and other live data sources to re-optimize the route in real-time. It would be interesting to explore how the user experience can be improved. For example, adding features like drag-and-drop locations, setting priority locations, and modifying the route by adding or removing locations. We further plan to integrate public transportation like buses, trains, and subways to plan the most optimal route that includes public transportation. It is yet to be explored if the system can be scaled to handle larger datasets with more destinations and constraints. This would require exploring parallel computing and distributed systems to optimize the route planning process.
+Long term goals consist of adding multi-criteria routing, such as optimizing not only for the earliest arrival time, but also for factors like cost and amount of transfers And adding support for real-time data (RTD), for example, incorporating traffic congestion, road outage and transit vehicle delays. Realtime data are already available for most networks, especially for transit networks. However, RTD is particularly hard to implement, because the underlying network changes, possibly invalidating precomputations. Fortunately, only small sections of a network are affected and need to be adjusted, leading to the identification of a changes impact and possible precomputations.
 
 ### Video_Demonstration
 
@@ -657,6 +724,10 @@ But the opera
 9:33 - 19:09 : Project Demonstration
 
 Note: It was noted later while reviewing the contents of the video that street graph networks and subgraphs being generated at run time during the later half of the video were not captured by screen sharing and hence they have been included in [Results and Discussion Section](#Result_and_Discussion)
+
+### Conclusion
+
+The OptiRoute project has presented an efficient and effective solution to the multi-destination most optimal route planning problem using the A* algorithm. The project successfully addresses the limitations and challenges faced by other algorithms such as Dijkstra, Dynamic Programming, and Uniform Cost Greedy Algorithm. OptiRoute provides a faster and more optimal route planning solution for users, saving them time and minimizing their travel distance. OptiRoute also has the potential to be further developed, by incorporating real-time optimization, multi-modal routing, and other features that could enhance the user experience. Overall, the OptiRoute project showcases the power of A* algorithm in solving the multi-destination most optimal route planning problem and highlights the potential of this approach in other real-world scenarios. With further development, OptiRoute could become an essential tool for travel planners, logistics providers, and transportation agencies
 
 #### Workflow
 
