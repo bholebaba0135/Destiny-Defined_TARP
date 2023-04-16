@@ -172,7 +172,7 @@ The A* algorithm can be modified to handle the multi-destination route planning 
 
 Another advantage of the A* algorithm is its ability to incorporate additional constraints and heuristics into the search process. For example, the algorithm can be modified to incorporate real-time traffic data, road closures, or other relevant information, which can help to generate more accurate and relevant routes for the users. This flexibility makes the A* algorithm well-suited for route planning in dynamic and complex environments.
 
-### Literature Survey
+### Literature_Survey
 
 |  Title  |  Author  |  Algorithm and dataset  |  Important Findings  |  Limitations  |  References  |
 | --- | --- | --- | --- | --- | --- |
