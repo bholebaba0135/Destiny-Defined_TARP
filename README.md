@@ -510,7 +510,7 @@ OSM was the main source of data for the road network, as well as information on 
 - Relations, consisting of nodes, ways and other relations, representing relationships between the referenced data 
 - Tags as key-value pairs, storing metadata about the other items
 
-![](assets/xml.png)
+![](assets/xml.PNG)
 
 Ways are used to represent roads consisting of nodes. Tags are used to describe metadata like speed limits for a road or whether it is a one way street or not. However, the format also contains a lot of data not directly relevant for route planning, like shapes of buildings and outlines of public parks. Therefore, we filter OSM data and only keep relevant information. 
 
